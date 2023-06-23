@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../config/sizeConfig/size_config.dart';
+import '../../../utils/image_path.dart';
 
 class SplashWidget extends StatefulWidget {
   const SplashWidget({Key? key}) : super(key: key);
@@ -28,19 +29,19 @@ class _SplashWidgetState extends State<SplashWidget> {
             SizedBox(
               height: SizeConfig.screenHeightDp,
               width: SizeConfig.screenWidthDp,
-              // child: Center(
-              //   child: SizedBox(
-              //     width: SizeConfig.screenWidthDp! - 120,
-              //     height: SizeConfig().sh(100).toDouble(),
-              //     child: Center(
-              //       child: SvgPicture.asset(
-              //         "/".toSVG(),
-              //         width: SizeConfig.screenWidthDp! - 120,
-              //         height: SizeConfig().sh(100).toDouble(),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              child: Center(
+                child: SizedBox(
+                  width: SizeConfig.screenWidthDp! - 120,
+                  height: SizeConfig().sh(100).toDouble(),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      ImagesAsset.loadingImg,
+                      width: SizeConfig.screenWidthDp! - 120,
+                      height: SizeConfig().sh(100).toDouble(),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),

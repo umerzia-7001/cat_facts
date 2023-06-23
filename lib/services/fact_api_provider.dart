@@ -11,7 +11,4 @@ abstract class FactApiProvider {
 
   @GET('cat-fact.herokuapp.com/facts/random')
   Future<Fact> getFact();
-
-  @GET('cataas.com/cat')
-  Future<Fact> geCatImage();
 }

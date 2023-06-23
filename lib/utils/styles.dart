@@ -12,17 +12,17 @@ mixin Styles {
       bodyLarge: GoogleFonts.montserrat(
         fontSize: 18.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
       bodyMedium: GoogleFonts.montserrat(
         fontSize: 15.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
       bodySmall: GoogleFonts.montserrat(
         fontSize: 12.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -48,17 +48,17 @@ mixin Styles {
       bodyLarge: GoogleFonts.montserrat(
         fontSize: 18.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
       bodyMedium: GoogleFonts.montserrat(
         fontSize: 15.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
       bodySmall: GoogleFonts.montserrat(
         fontSize: 12.0,
         fontWeight: FontWeight.w400,
-        color: AppColor.FONT_GRAY.withOpacity(0.7),
+        color: AppColor.LM_BACKGROUND_BASIC,
       ),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proarea_assignment/ui/home/screen/history.dart';
 import 'package:proarea_assignment/ui/home/screen/home.dart';
 import 'package:proarea_assignment/ui/splash/screen/splash_screen.dart';
 
@@ -14,6 +15,10 @@ mixin RouteGenerator {
       case HomeScreen.routeName:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+      case HistoryScreen.routeName:
+        return MaterialPageRoute(
+          builder: (_) => const HistoryScreen(),
         );
       default:
         return _errorRoute();

@@ -13,12 +13,4 @@ class FactRepository {
       throw Exception('Failed to fetch random fact');
     }
   }
-
-  Future<Fact> getRandomCatImage() async {
-    try {
-      return await _apiProvider.geCatImage();
-    } catch (e) {
-      throw Exception('Failed to get random cat image');
-    }
-  }
 }

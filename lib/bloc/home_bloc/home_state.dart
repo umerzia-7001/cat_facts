@@ -10,26 +10,15 @@ abstract class HomeState extends Equatable {
 
 class HomeInitial extends HomeState {}
 
-class HomeLoading extends HomeState {}
+class FactLoading extends HomeState {}
 
-class HomeLoaded extends HomeState {
+class FactLoaded extends HomeState {
   final Fact fact;
 
-  const HomeLoaded(this.fact);
+  const FactLoaded(this.fact);
 
   @override
   List<Object?> get props => [fact];
-}
-
-class ImageLoading extends HomeState {}
-
-class ImageLoaded extends HomeState {
-  final String imageUrl;
-
-  const ImageLoaded(this.imageUrl);
-
-  @override
-  List<Object?> get props => [imageUrl];
 }
 
 class HomeError extends HomeState {

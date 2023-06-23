@@ -26,3 +26,11 @@ class Fact extends HiveObject {
     };
   }
 }
+
+class FactBox {
+  static const String boxName = 'fact';
+
+  static Future<Box> openBox() async {
+    return await Hive.openBox<Fact>(boxName);
+  }
+}

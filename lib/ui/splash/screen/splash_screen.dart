@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:proarea_assignment/utils/helpers.dart';
 
 import '../../home/screen/home.dart';
 import '../widget/splash_widget.dart';
@@ -17,10 +19,16 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    Future.delayed(const Duration(seconds: 2), () async {
+      startNavigation();
+    });
+  }
 
-    Future.delayed(const Duration(seconds: 3), () async {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomeScreen()));
+  Future<void> startNavigation() async {
+    context.setLocale(Locale(context.locale.toString(), ''));
+    logger(Locale(context.locale.toString(), '').toString());
+    Future.delayed(const Duration(seconds: 4), () async {
+      Navigator.pushNamed(context, HomeScreen.routeName);
     });
   }
 

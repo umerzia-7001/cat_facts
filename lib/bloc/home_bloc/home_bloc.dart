@@ -2,6 +2,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
 
+import '../../models/fact.dart';
 import '../../services/repository.dart';
 import 'home_state.dart';
 import 'home_event.dart';
@@ -19,10 +20,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     FetchFact event,
     Emitter<HomeState> emit,
   ) async {
-    emit(HomeLoading());
+    emit(FactLoading());
     try {
       final fact = await _repository.getRandomFact();
-      emit(HomeLoaded(fact));
+
+      final factBox = await FactBox.openBox();
+      factBox.add(fact);
+      emit(FactLoaded(fact));
     } catch (e) {
       emit(const HomeError('Failed to load fact'));
     }
